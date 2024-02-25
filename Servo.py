@@ -9,6 +9,7 @@ class Servo:
         self.PwmServo.setServoPulse(8, 1500)
         self.PwmServo.setServoPulse(9, 1500)
 
+        self.turnSpeed = 5
         # zero out everything
         self.upAngle = 0
         self.sideAngle = 90
@@ -36,7 +37,28 @@ class Servo:
             self.PwmServo.setServoPulse(15, 500 + int((angle + error) / 0.09))
 
     def lookUp(self):
-        self.setServoPwm("0", )
+        if (self.upAngle >= 180):
+            return
+        self.upAngle += self.turnSpeed
+        self.setServoPwm("1", self.upAngle)
+
+    def lookDown(self):
+        if (self.upAngle <= 0):
+            return
+        self.upAngle -= self.turnSpeed
+        self.setServoPwm("1", self.upAngle)
+
+    def lookLeft(self):
+        if (self.sideAngle >= 180):
+            return
+        self.sideAngle += self.turnSpeed
+        self.setServoPwm("0", self.sideAngle)
+
+    def lookRight(self):
+        if (self.sideAngle <= 0):
+            return
+        self.sideAngle -= self.turnSpeed
+        self.setServoPwm("0", self.sideAngle)
 
 
 # Main program logic follows:

@@ -21,10 +21,14 @@ def keyboardLoop():
         elif key == "d":
             Right()
             print("RIGHT")
-        # elif key == "q":
-            
-        # elif key == "e":
-
+        elif key == "q":
+            servo.lookLeft()
+        elif key == "e":
+            servo.lookRight()
+        elif key == "1":
+            servo.lookUp()
+        elif key == "2":
+            servo.lookDown()
         else:
             Stop()
 
