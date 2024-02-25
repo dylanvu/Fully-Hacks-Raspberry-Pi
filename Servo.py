@@ -49,7 +49,7 @@ if __name__ == '__main__':
     while True:
         try:
             pwm.setServoPwm('0', 90)
-            pwm.setServoPwm('1', 0)
+            pwm.setServoPwm('1', -10)
             # time.sleep(3)
             # pwm.setServoPwm('1', 0)
             # break
