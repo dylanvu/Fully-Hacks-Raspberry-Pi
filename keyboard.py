@@ -1,5 +1,5 @@
 # this script's used to remote control the rover using keypresses
-from drivers.Motor import *
+from Motor import *
 
 
 def keyboardLoop():
