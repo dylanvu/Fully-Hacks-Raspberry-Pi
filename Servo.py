@@ -13,8 +13,8 @@ class Servo:
         self.upAngle = 0
         self.sideAngle = 90
 
-        # self.setServoPwm("0", self.sideAngle)
-        # self.setServoPwm("1", self.upAngle)
+        self.setServoPwm("0", self.sideAngle)
+        self.setServoPwm("1", self.upAngle)
 
     def setServoPwm(self, channel, angle, error=10):
         angle = int(angle)
@@ -49,8 +49,7 @@ if __name__ == '__main__':
     while True:
         try:
             pwm.setServoPwm('0', 90)
-            pwm.setServoPwm('1', -40)
-            # time.sleep(3)
+            pwm.setServoPwm('1', 0)
             # pwm.setServoPwm('1', 0)
             # break
         except KeyboardInterrupt:
