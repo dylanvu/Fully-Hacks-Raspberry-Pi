@@ -1,5 +1,4 @@
-# import smbus as smbus
-import smbus2 as smbus
+import smbus
 import time
 class Adc:
     def __init__(self):
