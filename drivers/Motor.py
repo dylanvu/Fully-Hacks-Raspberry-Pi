@@ -106,30 +106,22 @@ class Motor:
             angle -= 5
 
 
-class MotorController:
 
-    def __init__(self):
-        self.pwm = Motor()
     
-    def Forward(self):
-        self.pwm.setMotorModel(2000, 2000, 2000, 2000)
+def Forward():
+    PWM.setMotorModel(2000, 2000, 2000, 2000)
 
-    def Back(self):
-        self.pwm.setMotorModel(-2000, -2000, -2000, -2000)
+def Back():
+    PWM.setMotorModel(-2000, -2000, -2000, -2000)
     
-    def Left(self):
-        self.pwm.setMotorModel(-500, -500, 2000, 2000)  # Left
+def Left():
+    PWM.setMotorModel(-500, -500, 2000, 2000)  # Left
 
-    def Right(self):
-        self.pwm.setMotorModel(2000, 2000, -500, -500)
+def Right():
+    PWM.setMotorModel(2000, 2000, -500, -500)
 
-    def Stop(self):
-        self.pwm.setMotorModel(0, 0, 0, 0)
-
-    def __del__(self):
-        self.Stop()
-
-
+def Stop():
+    PWM.setMotorModel(0, 0, 0, 0)
 
 PWM = Motor()
 
