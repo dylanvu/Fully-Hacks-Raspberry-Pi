@@ -1,8 +1,11 @@
 # this script's used to remote control the rover using keypresses
 from Motor import *
+from Servo import Servo
 
 
 def keyboardLoop():
+    # create the servo controller class
+    servo = Servo()
     while True:
         key = input("Control the rover: ")
         key = key.lower()
@@ -18,6 +21,9 @@ def keyboardLoop():
         elif key == "d":
             Right()
             print("RIGHT")
+        # elif key == "q":
+            
+        # elif key == "e"
         else:
             Stop()
 
