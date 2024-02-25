@@ -1,6 +1,6 @@
 import math
-from .PCA9685 import PCA9685
-from .ADC import *
+from drivers.PCA9685 import PCA9685
+from drivers.ADC import *
 import time
 
 
@@ -106,6 +106,7 @@ class Motor:
             angle -= 5
 
 
+PWM = Motor()
 
     
 def Forward():
@@ -123,7 +124,6 @@ def Right():
 def Stop():
     PWM.setMotorModel(0, 0, 0, 0)
 
-PWM = Motor()
 
 
 def loop():
