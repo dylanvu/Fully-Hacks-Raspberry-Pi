@@ -1,22 +1,23 @@
 # this script is used to remote control the rover using keypresses
-import keyboard
 from drivers.Motor import *
 
 
 def keyboardLoop():
     while True:
-        if keyboard.is_pressed('up'):
+        key = input("Control the rover: ")
+        key = key.lower()
+        if key is "w":
             Forward()
-            print("UP key pressed")
-        if keyboard.is_pressed('down'):
-            print("DOWN key pressed")
+            print("UP")
+        if key is "s":
+            print("DOWN")
             Back()
-        if keyboard.is_pressed('left'):
-            print("LEFT key pressed")
+        if key is "a":
+            print("LEFT")
             Left()
-        if keyboard.is_pressed('right'):
+        if key is "d":
             Right()
-            print("RIGHT key pressed")
+            print("RIGHT")
 
 
 if __name__ == '__main__':
