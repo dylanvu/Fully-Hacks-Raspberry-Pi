@@ -48,13 +48,13 @@ class Servo:
         self.upAngle -= self.turnSpeed
         self.setServoPwm("1", self.upAngle)
 
-    def lookLeft(self):
+    def lookRight(self):
         if (self.sideAngle >= 180):
             return
         self.sideAngle += self.turnSpeed
         self.setServoPwm("0", self.sideAngle)
 
-    def lookRight(self):
+    def lookLeft(self):
         if (self.sideAngle <= 0):
             return
         self.sideAngle -= self.turnSpeed
