@@ -52,7 +52,7 @@ if __name__ == '__main__':
             pwm.setServoPwm('1', 0)
             # time.sleep(3)
             # pwm.setServoPwm('1', 0)
-            break
+            # break
         except KeyboardInterrupt:
             print("\nEnd of program")
             break
